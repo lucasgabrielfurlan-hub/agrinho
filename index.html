@@ -16,28 +16,20 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
             background: #f8f9fa;
         }
         
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?amazonia,floresta') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://source.unsplash.com/1600x900/?amazon-rainforest,brazil') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 120px 20px;
+            padding: 140px 20px;
         }
         
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.4rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        header h1 { font-size: 3.8rem; margin-bottom: 15px; }
+        header p { font-size: 1.5rem; max-width: 900px; margin: 0 auto; }
         
         nav {
             background: var(--verde-escuro);
@@ -45,43 +37,31 @@
             top: 0;
             z-index: 100;
         }
-        
         nav ul {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             list-style: none;
             padding: 15px 0;
         }
-        
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 25px;
+            padding: 12px 25px;
             font-weight: 600;
             transition: 0.3s;
         }
+        nav a:hover { background: var(--verde); }
         
-        nav a:hover {
-            background: var(--verde);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        section {
-            margin-bottom: 80px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
         
         h2 {
             color: var(--verde-escuro);
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 2.6rem;
             text-align: center;
-            border-bottom: 3px solid var(--verde);
-            padding-bottom: 10px;
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--verde);
+            padding-bottom: 12px;
             display: inline-block;
         }
         
@@ -93,90 +73,103 @@
         
         .card {
             background: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            transition: all 0.4s;
         }
-        
-        .card:hover {
-            transform: translateY(-10px);
-        }
+        .card:hover { transform: translateY(-12px); }
         
         .card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
         
-        .card-content {
-            padding: 25px;
-        }
+        .card-content { padding: 25px; }
         
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
         }
         
         .stat-item {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 30px 20px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
         
         .stat-item h3 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             color: var(--verde);
+            margin-bottom: 8px;
         }
         
-        .bioma {
-            background: #fff;
-            padding: 30px;
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .galeria img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
             border-radius: 12px;
-            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
         
         footer {
             background: var(--verde-escuro);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         
         .btn {
             display: inline-block;
             background: var(--verde);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             margin-top: 20px;
             transition: 0.3s;
         }
-        
         .btn:hover {
             background: #3cb371;
-            transform: scale(1.05);
+            transform: scale(1.08);
+        }
+        
+        .destaque {
+            background: #e8f5e9;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Equilíbrio Verde</h1>
-        <p>Como o Brasil concilia alta produção agropecuária com a preservação do meio ambiente</p>
+        <p>Produzir com responsabilidade • Preservar para o futuro • Brasil sustentável</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#introducao">Introdução</a></li>
-            <li><a href="#dados">Dados & Estatísticas</a></li>
+            <li><a href="#dados">Dados 2025/26</a></li>
+            <li><a href="#avancos">Avanços Recentes</a></li>
             <li><a href="#desafios">Desafios</a></li>
-            <li><a href="#solucoes">Soluções & Práticas</a></li>
+            <li><a href="#solucoes">Soluções</a></li>
+            <li><a href="#ilpf">ILPF</a></li>
             <li><a href="#biomas">Biomas</a></li>
         </ul>
     </nav>
@@ -184,65 +177,90 @@
     <div class="container">
         <!-- Introdução -->
         <section id="introducao">
-            <h2>Produção que Preserva</h2>
-            <p style="font-size: 1.2rem; text-align: center; max-width: 900px; margin: 0 auto 40px;">
-                O Brasil é um dos maiores produtores de alimentos do mundo, mas também possui uma das maiores áreas preservadas em propriedades rurais do planeta. 
-                Em média, o produtor brasileiro destina <strong>49,4% de suas terras à preservação da vegetação</strong>, um número extraordinário e sem paralelo em outros países.
+            <h2>O Equilíbrio Possível</h2>
+            <p style="font-size: 1.25rem; text-align: center; max-width: 950px; margin: 0 auto 40px;">
+                O Brasil é um dos maiores produtores de alimentos do mundo e, ao mesmo tempo, possui uma das maiores reservas de vegetação nativa em propriedades privadas do planeta. 
+                O Código Florestal Brasileiro exige que os produtores preservem áreas significativas de suas terras.
             </p>
-            <div style="text-align: center;">
-                <a href="#dados" class="btn">Ver os números</a>
+            <div class="destaque">
+                <strong>Em média, mais de 49% das terras rurais brasileiras são destinadas à preservação (Reserva Legal + APPs).</strong>
             </div>
         </section>
 
-        <!-- Estatísticas -->
+        <!-- Estatísticas Atualizadas -->
         <section id="dados">
-            <h2>Dados & Estatísticas</h2>
+            <h2>Dados Atualizados 2025/2026</h2>
             <div class="stats">
                 <div class="stat-item">
-                    <h3>49,4%</h3>
-                    <p>das terras rurais destinadas à preservação</p>
+                    <h3>5.731 km²</h3>
+                    <p>Desmatamento na Amazônia em 2025 (queda de ~11%)</p>
                 </div>
                 <div class="stat-item">
-                    <h3>5.731 km²</h3>
-                    <p>desmatamento na Amazônia em 2025 (queda de ~11%)</p>
+                    <h3>346,1 milhões t</h3>
+                    <p>Produção de grãos na safra 2025 (recorde histórico)</p>
                 </div>
                 <div class="stat-item">
                     <h3>R$ 775 bilhões</h3>
-                    <p>PIB da agropecuária em 2025</p>
+                    <p>Valor adicionado da Agropecuária em 2025</p>
                 </div>
                 <div class="stat-item">
-                    <h3>353 milhões t</h3>
-                    <p>produção de grãos na safra 2025/26</p>
+                    <h3>11,7%</h3>
+                    <p>Crescimento do PIB da Agropecuária em 2025</p>
                 </div>
             </div>
-            <p style="text-align: center; font-style: italic; margin-top: 30px;">
-                Fontes: Embrapa, INPE/Prodes, IBGE e Ministério da Agricultura (dados atualizados até 2025/2026).
-            </p>
+        </section>
+
+        <!-- Avanços Recentes -->
+        <section id="avancos">
+            <h2>Avanços Recentes</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?amazon-deforestation-reduction" alt="Redução desmatamento">
+                    <div class="card-content">
+                        <h3>Queda no Desmatamento</h3>
+                        <p>Menor taxa da Amazônia em 11 anos (2025). Quarta queda consecutiva.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?sustainable-farming" alt="Agricultura sustentável">
+                    <div class="card-content">
+                        <h3>Recorde de Produção</h3>
+                        <p>Safra 2025 bateu recorde com 346 milhões de toneladas de grãos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?forest-conservation" alt="Preservação">
+                    <div class="card-content">
+                        <h3>Código Florestal</h3>
+                        <p>Reserva Legal: 80% na Amazônia florestal, 20% na maioria das demais regiões.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Desafios -->
         <section id="desafios">
-            <h2>Os Desafios</h2>
+            <h2>Principais Desafios</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="https://source.unsplash.com/600x400/?desmatamento" alt="Desmatamento">
+                    <img src="https://source.unsplash.com/600x400/?deforestation" alt="Desmatamento">
                     <div class="card-content">
-                        <h3>Desmatamento e expansão agrícola</h3>
-                        <p>Embora em redução, o desmatamento ainda pressiona biomas como Amazônia e Cerrado.</p>
+                        <h3>Desmatamento Ilegal</h3>
+                        <p>Ainda pressiona a Amazônia e o Cerrado, embora em redução.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/600x400/?solo,agricultura" alt="Degradação do solo">
+                    <img src="https://source.unsplash.com/600x400/?soil-degradation" alt="Degradação do solo">
                     <div class="card-content">
-                        <h3>Degradação do solo e recursos hídricos</h3>
-                        <p>Uso intensivo de insumos e mudanças climáticas afetam a produtividade a longo prazo.</p>
+                        <h3>Degradação de Pastagens</h3>
+                        <p>Áreas degradadas ainda representam desafio para expansão sustentável.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/600x400/?emissoes,carbono" alt="Emissões">
+                    <img src="https://source.unsplash.com/600x400/?climate-change-brazil" alt="Mudanças climáticas">
                     <div class="card-content">
-                        <h3>Emissões de carbono</h3>
-                        <p>Parte significativa das emissões brasileiras vem do uso da terra e da pecuária.</p>
+                        <h3>Mudanças Climáticas</h3>
+                        <p>Impactos na produtividade e na biodiversidade dos biomas.</p>
                     </div>
                 </div>
             </div>
@@ -253,46 +271,70 @@
             <h2>Soluções e Práticas Sustentáveis</h2>
             <div class="card-grid">
                 <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?no-till-farming" alt="Plantio Direto">
                     <div class="card-content">
-                        <h3>Código Florestal Brasileiro</h3>
-                        <p>Exige Reserva Legal e Áreas de Preservação Permanente (APP) em todas as propriedades rurais.</p>
+                        <h3>Plantio Direto e Agricultura de Precisão</h3>
+                        <p>Reduz erosão, melhora o solo e diminui emissões.</p>
                     </div>
                 </div>
                 <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?bioeconomy" alt="Bioeconomia">
                     <div class="card-content">
-                        <h3>Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
-                        <p>Aumenta produtividade, recupera pastagens degradadas e reduz pressão sobre novas áreas.</p>
+                        <h3>Bioeconomia da Floresta</h3>
+                        <p>Aproveitamento sustentável de produtos da sociobiodiversidade (açaí, castanha, óleos).</p>
                     </div>
                 </div>
                 <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?carbon-credit" alt="Créditos de carbono">
                     <div class="card-content">
-                        <h3>Tecnologias de Baixa Emissão</h3>
-                        <p>Plantio Direto, bioinsumos, agricultura de precisão e sistemas de terminação intensiva de gado.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Créditos de Carbono e Pagamento por Serviços Ambientais</h3>
-                        <p>Remuneram o produtor pela conservação da floresta.</p>
+                        <h3>Créditos de Carbono</h3>
+                        <p>Remuneração pela conservação e restauração florestal.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ILPF -->
+        <section id="ilpf">
+            <h2>Integração Lavoura-Pecuária-Floresta (ILPF)</h2>
+            <p style="text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto 40px;">
+                Sistema que combina agricultura, pecuária e árvores na mesma área. Recupera pastagens degradadas, aumenta produtividade e reduz pressão por novas áreas.
+            </p>
+            <div class="galeria">
+                <img src="https://source.unsplash.com/600x400/?integrated-farming" alt="ILPF Brasil">
+                <img src="https://source.unsplash.com/600x400/?cattle-forest" alt="Pecuária com árvores">
+                <img src="https://source.unsplash.com/600x400/?soy-corn-forest" alt="Lavoura integrada">
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://redeilpf.org.br/" target="_blank" class="btn">Saiba mais sobre ILPF</a>
+            </div>
+        </section>
+
         <!-- Biomas -->
         <section id="biomas">
-            <h2>Os Biomas Brasileiros e a Produção</h2>
-            <div class="bioma">
-                <h3>Amazônia</h3>
-                <p>Redução significativa do desmatamento em 2025. Foco em produção sustentável e bioeconomia (castanha, açaí, óleos etc.).</p>
-            </div>
-            <div class="bioma">
-                <h3>Cerrado</h3>
-                <p>Principal fronteira agrícola do Brasil. Sistemas de integração ajudam a aumentar produção sem expandir área.</p>
-            </div>
-            <div class="bioma">
-                <h3>Mata Atlântica, Caatinga e Pantanal</h3>
-                <p>Preservação e produção integrada são essenciais para manter a biodiversidade e os serviços ecossistêmicos.</p>
+            <h2>Biomas Brasileiros e Produção Sustentável</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?amazon-rainforest" alt="Amazônia">
+                    <div class="card-content">
+                        <h3>Amazônia</h3>
+                        <p>Menor desmatamento em 11 anos. Foco em bioeconomia e redução de emissões.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?cerrado-savanna" alt="Cerrado">
+                    <div class="card-content">
+                        <h3>Cerrado</h3>
+                        <p>Principal fronteira agrícola. ILPF ajuda a intensificar produção sem expandir área.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/600x400/?pantanal-wetland" alt="Pantanal">
+                    <div class="card-content">
+                        <h3>Pantanal, Mata Atlântica e Caatinga</h3>
+                        <p>Preservação essencial para serviços ecossistêmicos e adaptação climática.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -300,19 +342,16 @@
     <footer>
         <p><strong>Equilíbrio Verde Brasil</strong> — Produzir mais, preservando melhor</p>
         <p style="margin-top: 15px; font-size: 0.95rem;">
-            Site educativo • Dados baseados em fontes oficiais (INPE, Embrapa, IBGE, Ministério da Agricultura - 2025/2026)
+            Dados baseados em fontes oficiais: INPE/Prodes (2025), IBGE (2025/2026), Embrapa e Ministério da Agricultura.
         </p>
-        <p style="margin-top: 20px;">Feito com ❤️ pelo futuro sustentável do Brasil</p>
+        <p style="margin-top: 20px;">🌱 Site educativo • Futuro sustentável do Brasil</p>
     </footer>
 
     <script>
-        // Scroll suave para links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
